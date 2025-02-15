@@ -1,0 +1,47 @@
+/* App.css */
+.App {
+    font-family: Arial, sans-serif;
+}
+
+.App-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.search-box {
+    text-align: center;
+}
+
+.search-input {
+    background-color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
+    transform: scale(1.02);
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.mic-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mic-button.active {
+    color: red;
+}

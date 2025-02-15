@@ -1,0 +1,42 @@
+{
+    "name": "spearch-rrecognition",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "https://ehsanrashidi.github.io/spearch-recognition",
+    "dependencies": {
+        "@emotion/react": "^11.14.0",
+        "@emotion/styled": "^11.14.0",
+        "@mui/icons-material": "^6.4.4",
+        "@mui/material": "^6.4.4",
+        "cra-template-typescript": "1.2.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-scripts": "5.0.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@types/dom-speech-recognition": "^0.0.4",
+        "@types/react": "^19.0.8",
+        "@types/react-dom": "^19.0.3",
+        "gh-pages": "^6.3.0"
+    }
+}
