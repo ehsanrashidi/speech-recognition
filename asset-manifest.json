@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/speech-recognition/static/css/main.31d6cfe0.css",
-    "main.js": "/speech-recognition/static/js/main.0d436d3c.js",
+    "main.js": "/speech-recognition/static/js/main.3631d87d.js",
     "index.html": "/speech-recognition/index.html",
-    "main.0d436d3c.js.map": "/speech-recognition/static/js/main.0d436d3c.js.map"
+    "main.3631d87d.js.map": "/speech-recognition/static/js/main.3631d87d.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.0d436d3c.js"
+    "static/js/main.3631d87d.js"
   ]
 }
