@@ -1,8 +1,8 @@
 {
-    "name": "spearch-rrecognition",
+    "name": "speech-recognition",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://ehsanrashidi.github.io/spearch-recognition",
+    "homepage": "https://ehsanrashidi.github.io/speech-recognition",
     "dependencies": {
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.0",
