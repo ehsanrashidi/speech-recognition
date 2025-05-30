@@ -1,40 +1,58 @@
+# نام workflow
 name: Deploy to GitHub Pages
 
+# تعریف زمان‌های اجرای workflow
 on:
+    # اجرا در زمان push به شاخه main
     push:
         branches: [main]
 
+# تعریف دسترسی‌های مورد نیاز
 permissions:
-    contents: read
-    pages: write
-    id-token: write
+    contents: read # دسترسی خواندن محتوا
+    pages: write # دسترسی نوشتن در Pages
+    id-token: write # دسترسی نوشتن توکن
 
+# تنظیمات همزمانی برای جلوگیری از اجرای همزمان
 concurrency:
     group: "pages"
     cancel-in-progress: false
 
 jobs:
+    # مرحله ساخت پروژه
     build:
         runs-on: ubuntu-latest
         steps:
+            # دریافت کد از مخزن
             - name: Checkout
               uses: actions/checkout@v4
+
+            # نصب Node.js
             - name: Setup Node
               uses: actions/setup-node@v4
               with:
                   node-version: "20"
                   cache: "npm"
+
+            # نصب وابستگی‌ها
             - name: Install dependencies
               run: npm install
+
+            # ساخت نسخه نهایی
             - name: Build
               run: npm run build
+
+            # تنظیم Pages
             - name: Setup Pages
               uses: actions/configure-pages@v4
+
+            # آپلود فایل‌های ساخته شده
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
                   path: "./dist"
 
+    # مرحله استقرار
     deploy:
         environment:
             name: github-pages
@@ -42,6 +60,7 @@ jobs:
         runs-on: ubuntu-latest
         needs: build
         steps:
+            # استقرار در GitHub Pages
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
